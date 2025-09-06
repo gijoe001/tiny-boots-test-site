@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiny Boots Football</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo"><img src="/images/tiny-boots-logo.svg" alt=""></div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact us</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Kickstart Your Child’s Confidence Through Football</h1>
+      <p>Fun, friendly coaching that builds skills, coordination, and big smiles — helping your child grow on and off the pitch.</p>
+      <div class="hero-buttons">
+        <a href="#trial" class="btn-primary">Try a Free First Session</a>
+        <a href="#contact" class="btn-secondary">Contact us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="about-header">
+    <h2>Making Football Fun for Everyone!</h2>
+    <p>With 8+ years of experience coaching young children, I specialize in creating a positive, encouraging environment where every child can thrive.</p>
+    </div>
+    <div class="about-grid-container">
+    <div class="about-grid-image">
+<img src="/images/coach-placeholder-image.png" alt="">
+    </div>
+    
+
+    <div class="about-grid">
+      <div>
+        <h3>Child Development Focus</h3>
+        <p>Every session is designed around child development principles, focusing on motor skills, social interaction, and building confidence.</p>
+      </div>
+      <div>
+        <h3>Patient & Caring Approach</h3>
+        <p>I understand that every child learns differently and at their own pace. My approach is always encouraging and supportive.</p>
+      </div>
+      <div>
+        <h3>Qualified & Experienced</h3>
+        <p>UEFA C license, First Aid certified, and specialized training in early childhood sports development.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section id="programs" class="programs">
+    <div class="programs-header">
+    <h2>Fun Programs for Every Age</h2>
+    <p>Carefully designed programs that grow with your child, from first steps to confident kicks!</p>
+    </div>
+    <div class="program-cards">
+      <div class="card">
+        <h3>Tiny Tots</h3>
+        <p>Ages 18 months</p>
+        <img src="/images/programs-placeholder-image.png" alt="">
+        <ul>
+          <li>Sensory ball exploration</li>
+          <li>Crawling & walking with balls</li>
+          <li>Parent participation required</li>
+        </ul>
+        <div class="card-duration"><img src="/images/time-icon.png" alt=""><p>30 minutes</p></div>
+      </div>
+      <div class="card">
+        <h3>Little Kickers</h3>
+        <p>Ages 2–3 years</p>
+        <img src="/images/programs-placeholder-image.png" alt="">
+        <ul>
+          <li>Basic ball handling & dribbling</li>
+          <li>Color recognition games</li>
+          <li>Parent participation welcome</li>
+        </ul>
+        <div class="card-duration"><img src="/images/time-icon.png" alt=""><p> 30 minutes</p></div>
+      </div>
+      <div class="card">
+        <h3>Young Champions</h3>
+        <p>Ages 4–5 years</p>
+        <img src="/images/programs-placeholder-image.png" alt="">
+        <ul>
+          <li>Basic kicking techniques</li>
+          <li>Simple team games</li>
+          <li>Following instructions</li>
+        </ul>
+        <div class="card-duration"><img src="/images/time-icon.png" alt=""><p>30 minutes</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="pricing">
+    <h2>Choose Your Package</h2>
+    <div class="pricing-cards">
+      <div class="card">
+        <h3>Drop-in session</h3>
+        <p>£10 / session</p>
+        <ul>
+          <li>UEFA Qualified, DBS checked coach</li>
+          <li>Fun, active learning through play</li>
+          <li>Parent-friendly sessions</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Monthly Baller</h3>
+        <p>£32 / month</p>
+        <ul>
+          <li>4 sessions per month</li>
+          <li>Parent-friendly sessions</li>
+          <li>Small groups, big smiles!</li>
+        </ul>
+      </div>
+      <div class="card best-value">
+        <h3>Termly Pass</h3>
+        <p>£85 / 12-week block</p>
+        <ul>
+          <li>Best value (save 30%)</li>
+          <li>Fun, active learning through play</li>
+          <li>Small groups, big smiles!</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+<!-- Sign up -->
+<section id="signup" class="signup">
+    <p id="trial"></p>
+    <h2>Sign Up for a Free Session</h2>
+
+  <!-- Hidden iframe -->
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+  <!-- Thank you message (hidden by default) -->
+  <p id="thankyou-msg" style="display:none; color:orange; font-weight:bold;">
+    ✅ Thank you for signing up! We’ll be in touch soon.
+  </p>
+
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSdFZ3T8BuSGKeHdyYW7uz7mwCRwCLFCoFhSv0--r1MUQiO6KA/formResponse"
+      method="POST" 
+      target="hidden_iframe"
+      class="signup-form">
+  
+      <label for="name">Child’s Name</label>
+      <input type="text" name="entry.994294289" id="name" required>
+  
+      <label for="parent">Parent’s Name</label>
+      <input type="text" name="entry.1883906575" id="parent" required>
+  
+      <label for="email">Email</label>
+      <input type="email" name="entry.572701622" id="email" required>
+  
+      <label for="session">Preferred Session</label>
+      <select name="entry.1990081910" id="session" required>
+        <option value="18 - 24 months">18 - 24 months</option>
+        <option value="2 - 3 years">2 - 3 years</option>
+        <option value="4 - 5 years">4 - 5 years</option>
+      </select>
+      <label for="date">Select a Date</label>
+<select name="entry.1780367386" id="date" required>
+  <option value="">-- Choose a date --</option>
+  <!-- Options will be added by JavaScript -->
+</select>
+      <button type="submit" class="btn-primary">Submit</button>
+    </form>
+  </section>
+  
+
+ <!-- Testimonials -->
+ <section id="reviews" class="reviews">
+    <h2>Join our growing football family</h2>
+    <p>See why parents trust us to coach, inspire, and support their children week after week.</p>
+  
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>“My son absolutely loves these sessions. He’s grown in confidence so much, and it’s amazing to see him smiling every week.”</p>
+        <span>— Sarah, parent of a 6-year-old</span>
+      </div>
+  
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>“The coaches are brilliant with the kids — patient, fun, and encouraging. My daughter went from being shy to running onto the pitch with a huge grin.”</p>
+        <span>— James, parent of a 5-year-old</span>
+      </div>
+  
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>“It’s more than just football — my child has made friends, learned teamwork, and developed skills that help beyond the game.”</p>
+        <span>— Emma, parent of a 7-year-old</span>
+      </div>
+    </div>
+      <!-- Dots (shown only on mobile) -->
+  <div class="review-dots" id="reviewDots"></div>
+  </section>
+  
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact us</h2>
+  
+    <div class="contact-grid">
+      <!-- Contact Info Card -->
+      <div class="contact-card">
+        <h3>Contact information</h3>
+        <div class="contact-item">
+          <span class="icon">📞</span>
+          <p><a href="tel:07984968251">07984 968251</a></p>
+        </div>
+        <div class="contact-item">
+          <span class="icon">✉️</span>
+          <p><a href="mailto:njwsportz@gmail.com">njwsportz@gmail.com</a></p>
+        </div>
+      </div>
+  
+      <!-- Map + Location -->
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2347.8387990267315!2d-0.9129158908716184!3d51.437484456173095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876849a85fff139%3A0xd001882380d3d11a!2sSt%20Nicolas%20Church%20Earley!5e0!3m2!1sen!2suk!4v1757191393499!5m2!1sen!2suk" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p class="location">
+          <strong>Location</strong><br>
+          We are currently holding our classes at <strong>St Nicolas Church Earley, RG6 7JN</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <img src="/images/njw-sportz-logo.svg" alt="">
+    <h3>Building confidence, one kick at a time!</h3>
+    <p>© 2025 Tiny Boots. All rights reserved. | Licensed & Insured</p>
+    <p class="designed-by">Website design by Joseph Campbell</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
