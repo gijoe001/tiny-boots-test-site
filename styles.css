@@ -183,6 +183,14 @@ text-align: left;
     padding: 3rem 1rem;
     text-align: center;
   }
+  .pricing-header {
+    max-width: 70ch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 5%;
+  }
   .pricing-cards {
     display: flex;
     flex-wrap: wrap;
