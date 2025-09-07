@@ -298,8 +298,9 @@ text-align: left;
 
 /* Reviews Section */
 /* Reviews Section */
+/* Reviews Section */
 .reviews {
-    padding: 4rem 1rem;
+    padding: 4rem 2rem;
     background: #0b0f1a;
     text-align: center;
     color: #fff;
@@ -316,23 +317,26 @@ text-align: left;
     color: #bbb;
   }
   
-  /* Grid Layout */
+  /* Desktop Grid */
   .review-grid {
-    display: flex;
-    margin:auto ;
-    text-align: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 70%;
+    margin: auto;
+    gap: 1.5rem;
+    justify-items: center;
   }
   
   /* Review Card */
   .review-card {
     padding: 2rem;
-    margin: 10px;
     background: #1a1f2f;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     max-width: 350px;
     text-align: center;
+    flex: 0 0 90%; /* ✅ used in mobile slider */
+    scroll-snap-align: center;
   }
   
   .stars {
@@ -352,9 +356,12 @@ text-align: left;
     font-style: italic;
     color: #ccc;
   }
+  
+  /* Mobile Slider */
   @media (max-width: 768px) {
     .review-grid {
       display: flex;
+      max-width: 100%;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       gap: 1rem;
@@ -363,22 +370,28 @@ text-align: left;
     }
   
     .review-card {
-      flex: 0 0 80%; /* each card takes 80% of viewport */
+      flex: 0 0 90%; /* ✅ fills most of screen */
     }
   
-    /* hide scrollbar for nicer look */
+    /* Hide scrollbar */
     .review-grid::-webkit-scrollbar {
       display: none;
     }
     .review-grid {
-      -ms-overflow-style: none;  /* IE/Edge */
-      scrollbar-width: none;     /* Firefox */
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  
+    /* Show dots only on mobile */
+    .review-dots {
+      margin-top: 1rem;
+      text-align: center;
+      display: block;
     }
   }
+  
   /* Dots */
-.review-dots {
-    margin-top: 1rem;
-    text-align: center;
+  .review-dots {
     display: none; /* hidden on desktop */
   }
   
@@ -397,12 +410,6 @@ text-align: left;
     background: orange;
   }
   
-  /* Show dots only on mobile */
-  @media (max-width: 768px) {
-    .review-dots {
-      display: block;
-    }
-  }
   
   
 /*About grid container*/

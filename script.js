@@ -9,32 +9,38 @@ menuToggle.addEventListener("click", () => {
     navLinks.style.display === "flex" ? "none" : "flex";
 });
 
-// =========================
-// Review Slider
-// =========================
-const cards = document.querySelectorAll(".review-card");
-const dots = document.querySelectorAll(".dot");
-let currentIndex = 0;
+// ========================
+// Testimonials Slider
+// ========================
 
-function showReview(index) {
-  cards.forEach((card, i) => {
-    card.classList.toggle("active", i === index);
-    dots[i].classList.toggle("active", i === index);
-  });
-}
+const grid = document.getElementById("reviewGrid");
+const dotsContainer = document.getElementById("reviewDots");
+const cards = grid.querySelectorAll(".review-card");
 
-// Auto cycle every 6s
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % cards.length;
-  showReview(currentIndex);
-}, 6000);
+// Create dots dynamically
+cards.forEach((_, i) => {
+  const dot = document.createElement("span");
+  dot.classList.add("dot");
+  if (i === 0) dot.classList.add("active");
 
-// Dot navigation
-dots.forEach((dot, i) => {
   dot.addEventListener("click", () => {
-    currentIndex = i;
-    showReview(currentIndex);
+    grid.scrollTo({
+      left: cards[i].offsetLeft,
+      behavior: "smooth"
+    });
   });
+
+  dotsContainer.appendChild(dot);
+});
+const dots = dotsContainer.querySelectorAll(".dot");
+
+// Update active dot on scroll
+grid.addEventListener("scroll", () => {
+  let scrollLeft = grid.scrollLeft;
+  let cardWidth = cards[0].offsetWidth;
+  let index = Math.round(scrollLeft / cardWidth);
+
+  dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
 });
 
 // ========================
