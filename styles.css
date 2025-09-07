@@ -95,7 +95,7 @@
 
   /* About */
   .about {
-    padding: 3rem 2rem;
+    padding: 3rem 1rem;
     text-align: center;
   }
   .about-header {
@@ -122,7 +122,7 @@ text-align: left;
   
   /* Programs */
   .programs {
-    padding: 3rem 2rem;
+    padding: 3rem 1rem;
     background: #111;
     text-align: center;
   }
@@ -180,7 +180,7 @@ text-align: left;
   }
   /* Pricing */
   .pricing {
-    padding: 3rem 2rem;
+    padding: 3rem 1rem;
     text-align: center;
   }
   .pricing-cards {
@@ -196,7 +196,7 @@ text-align: left;
   /* sign up form */
 /* Signup Section */
 .signup {
-    padding: 3rem 2rem;
+    padding: 3rem 1rem;
     background: #0b0f1a;
     text-align: center;
   }
@@ -272,7 +272,7 @@ text-align: left;
   
   /* Testimonials */
   .testimonials {
-    padding: 3rem 2rem;
+    padding: 3rem 1rem;
     background: #111;
     text-align: center;
   }
@@ -283,7 +283,7 @@ text-align: left;
   
   /* Contact */
   .contact {
-    padding: 3rem 2rem;
+    padding: 3rem 1rem;
     text-align: center;
   }
   
@@ -299,7 +299,7 @@ text-align: left;
 /* Reviews Section */
 /* Reviews Section */
 .reviews {
-    padding: 4rem 2rem;
+    padding: 4rem 1rem;
     background: #0b0f1a;
     text-align: center;
     color: #fff;
@@ -436,10 +436,13 @@ text-align: left;
         flex-direction: column;
         margin-inline: 20px;
     }
+    .hero {
+        background: url('images/header-image-mobile.jpg') no-repeat top right/cover;
+      }
   }
   /* Contact Section */
 .contact {
-    padding: 4rem 2rem;
+    padding: 4rem 1rem;
     background: #000;
     color: #fff;
     text-align: center;
