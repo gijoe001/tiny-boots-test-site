@@ -8,41 +8,53 @@ menuToggle.addEventListener("click", () => {
   navLinks.style.display =
     navLinks.style.display === "flex" ? "none" : "flex";
 });
-
 // ========================
-// Testimonials Slider
+// Sliders
 // ========================
-
-const grid = document.getElementById("reviewGrid");
-const dotsContainer = document.getElementById("reviewDots");
-const cards = grid.querySelectorAll(".review-card");
-
-// Create dots dynamically
-cards.forEach((_, i) => {
-  const dot = document.createElement("span");
-  dot.classList.add("dot");
-  if (i === 0) dot.classList.add("active");
-
-  dot.addEventListener("click", () => {
-    grid.scrollTo({
-      left: cards[i].offsetLeft,
-      behavior: "smooth"
-    });
+document.addEventListener("DOMContentLoaded", () => {
+    setupSlider("reviewGrid", ".review-card", "reviewDots");
+    setupSlider("pricing-cards", ".card", "pricingDots");
   });
-
-  dotsContainer.appendChild(dot);
-});
-const dots = dotsContainer.querySelectorAll(".dot");
-
-// Update active dot on scroll
-grid.addEventListener("scroll", () => {
-  let scrollLeft = grid.scrollLeft;
-  let cardWidth = cards[0].offsetWidth;
-  let index = Math.round(scrollLeft / cardWidth);
-
-  dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
-});
-
+  
+  function setupSlider(gridId, cardSelector, dotsContainerId) {
+    const grid = document.getElementById(gridId);
+    const cards = grid.querySelectorAll(cardSelector);
+    const dotsContainer = document.getElementById(dotsContainerId);
+  
+    // Create dots
+    cards.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.className = "dot";
+      if (i === 0) dot.classList.add("active");
+      dot.addEventListener("click", () =>
+        grid.scrollTo({ left: cards[i].offsetLeft, behavior: "smooth" })
+      );
+      dotsContainer.appendChild(dot);
+    });
+  
+    const dots = dotsContainer.querySelectorAll(".dot");
+  
+    // Update active dot on scroll
+    grid.addEventListener("scroll", () => {
+      const center = grid.scrollLeft + grid.clientWidth / 2;
+      let closest = 0;
+      let minDiff = Infinity;
+  
+      cards.forEach((c, i) => {
+        const cardCenter = c.offsetLeft + c.offsetWidth / 2;
+        const diff = Math.abs(center - cardCenter);
+        if (diff < minDiff) {
+          minDiff = diff;
+          closest = i;
+        }
+      });
+  
+      dots.forEach((dot, i) =>
+        dot.classList.toggle("active", i === closest)
+      );
+    });
+  }
+  
 // ========================
 // Populate Available Dates
 // ========================

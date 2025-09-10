@@ -136,11 +136,10 @@ text-align: left;
   }
   .program-cards {
     display: flex;
-    flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
   }
-  .card {
+   .card {
     background: #1a1f2f;
     padding: 1.5rem;
     border-radius: 10px;
@@ -150,7 +149,7 @@ text-align: left;
     justify-content: center;
     align-items: center;
     border: #223251 solid 2px;
-  }
+  } 
   .card img {
     width: 100%;
     margin-block: 15px;
@@ -178,10 +177,35 @@ text-align: left;
   .card .card-duration img {
     width: 15px;
   }
+  /* Mobile Slider */
+@media (max-width: 768px) {
+    .program-cards {
+      display: flex;
+      max-width: 100%;
+      justify-content: left;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      -webkit-overflow-scrolling: touch;
+    }
+    /* Hide scrollbar */
+    .program-cards::-webkit-scrollbar {
+      display: none;
+    }
+    .program-cards {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
   /* Pricing */
   .pricing {
     padding: 3rem 1rem;
     text-align: center;
+  }
+  .price {
+    font-size: 65px;
+    font-weight: bold;
   }
   .pricing-header {
     max-width: 70ch;
@@ -193,14 +217,41 @@ text-align: left;
   }
   .pricing-cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
+  }
+  .pricing-cards .card {
+    padding: 1.8rem;
   }
   .best-value {
     border: 2px solid orange;
   }
-
+/* Mobile Slider */
+@media (max-width: 768px) {
+    .pricing-cards {
+      display: flex;
+      max-width: 100%;
+      justify-content: left;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      -webkit-overflow-scrolling: touch;
+    }
+  
+    .card {
+      flex: 0 0 90%; /* ✅ fills most of screen */
+    }
+  
+    /* Hide scrollbar */
+    .pricing-cards::-webkit-scrollbar {
+      display: none;
+    }
+    .pricing-cards {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
   /* sign up form */
 /* Signup Section */
 .signup {
