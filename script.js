@@ -119,3 +119,38 @@ document.getElementById("hidden_iframe").addEventListener("load", function() {
     document.getElementById("thankyou-msg").style.display = "block";
     document.querySelector(".signup-form").reset();
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const dateSelect = document.getElementById("session-date");
+  
+    // Generate next 4 weeks of Sundays (example)
+    let today = new Date();
+    for (let i = 0; i < 28; i++) {
+      let d = new Date(today);
+      d.setDate(today.getDate() + i);
+      if (d.getDay() === 0) { // 0 = Sunday
+        let option = document.createElement("option");
+        option.value = d.toISOString().split("T")[0];
+        option.textContent = d.toDateString();
+        dateSelect.appendChild(option);
+      }
+    }
+  
+    // Handle form submission
+    const form = document.getElementById("bookingForm");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+  
+      // 👉 Replace this with Formspree or Google Form POST
+      console.log("Form submitted", Object.fromEntries(new FormData(form)));
+  
+      document.getElementById("thankyou-msg").style.display = "block";
+      form.reset();
+    });
+  });
+// 1 to 1 booking 
+function showThankYou() {
+    document.getElementById("thankyou-msg").style.display = "block";
+    document.getElementById("bookingForm").reset();
+  }
+  

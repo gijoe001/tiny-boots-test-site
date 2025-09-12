@@ -1,4 +1,7 @@
 /* Reset */
+:root {
+    --primary-orange:#FF6F00;
+}
 * {
     margin: 0;
     padding: 0;
@@ -18,10 +21,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
     position: fixed;
     width: 100%;
     padding: 1rem 10rem;
-    background: #111;
+    background: rgba(0, 0, 0, 0.7);
   }
   .logo img {
    max-width: 150px;
@@ -37,7 +41,7 @@
     transition: color 0.3s;
   }
   .nav-links a:hover {
-    color: orange;
+    color: var(--primary-orange);
   }
   .mobile-nav {
     display: none;
@@ -271,7 +275,7 @@ p {
     text-decoration: none;
   }
   .btn-primary {
-    background: orange;
+    background: var(--primary-orange);
     color: #000;
     width: 230px;
     text-align: center;
@@ -314,7 +318,7 @@ text-align: left;
   /* Programs */
   .programs {
     padding: 3rem 1rem;
-    background: #111;
+    background: #000;
     text-align: center;
   }
   .programs-header {
@@ -416,7 +420,16 @@ text-align: left;
     padding: 1.8rem;
   }
   .best-value {
-    border: 2px solid orange;
+    border: 2px solid var(--primary-orange);
+  }
+  .best-value-pill {
+    background-color: var(--primary-orange);
+    padding-inline: 20px;
+    padding-block: 2px;
+    top: -11%;
+    z-index: 1;
+    position: relative;
+    border-radius: 10px;
   }
 /* Mobile Slider */
 @media (max-width: 768px) {
@@ -454,7 +467,7 @@ text-align: left;
   
   .signup h2 {
     margin-bottom: 1.5rem;
-    color: orange;
+    color: var(--primary-orange);
   }
   
   /* Form Styling */
@@ -498,8 +511,8 @@ text-align: left;
   .signup-form input:focus,
   .signup-form select:focus {
     outline: none;
-    border-color: orange;
-    box-shadow: 0 0 5px orange;
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 5px var(--primary-orange);
   }
   
   .signup-form button {
@@ -508,7 +521,7 @@ text-align: left;
     width: 100%;
     border: none;
     border-radius: 10px;
-    background: orange;
+    background: var(--primary-orange);
     color: #000;
     font-weight: bold;
     font-size: 1.1rem;
@@ -542,7 +555,7 @@ text-align: left;
   .footer {
     padding: 1rem;
     text-align: center;
-    background: #111;
+    background: #0b0f1a;
     font-size: 0.9rem;
   }
   
@@ -592,7 +605,7 @@ text-align: left;
   
   .stars {
     font-size: 1.5rem;
-    color: orange;
+    color: var(--primary-orange);
     margin-bottom: 1rem;
   }
   
@@ -658,9 +671,50 @@ text-align: left;
   }
   
   .review-dots .dot.active {
-    background: orange;
+    background: var(--primary-orange);
   }
-  
+/*Google Calendar booking styles*/
+.booking {
+    background: url('images/1-2-1-image-desktop.jpg') no-repeat right;
+    padding-block: 4rem;
+    background-size: cover;
+}
+.booking h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+.booking .booking-header { 
+    margin: auto;
+    max-width: 600px;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.booking-header button {
+    margin-top: 3rem;
+    padding: 1rem;
+    width: 500px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary-orange);
+    color: #000 !important;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.booking-header button:hover {
+    background: #ff9900  !important;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .booking-container {
+      grid-template-columns: 1fr;
+    }
+  }
   
   
 /*About grid container*/
@@ -674,6 +728,13 @@ text-align: left;
   @media (max-width: 768px) {
     .navbar {
         padding: 1rem;
+    }
+    .booking {
+        .booking {
+            background: url(images/1-2-1-image-desktop.jpg) no-repeat right;
+            padding-block: 4rem;
+            background-size: contain;
+        }
     }
     .nav-links {
       display: none;
