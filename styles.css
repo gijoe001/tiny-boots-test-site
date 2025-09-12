@@ -680,8 +680,12 @@ text-align: left;
     background-size: cover;
 }
 .booking h2 {
+    color: #fff;
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
+}
+.booking p {
+    color: #fff;
 }
 .booking .booking-header { 
     margin: auto;
@@ -695,7 +699,8 @@ text-align: left;
 .booking-header button {
     margin-top: 3rem;
     padding: 1rem;
-    width: 500px;
+    width: 94%;
+    max-width: 500px;
     border: none;
     border-radius: 10px;
     background: var(--primary-orange);
@@ -730,11 +735,9 @@ text-align: left;
         padding: 1rem;
     }
     .booking {
-        .booking {
-            background: url(images/1-2-1-image-desktop.jpg) no-repeat right;
+            background: url('images/1-2-1-image-mobile.jpg') no-repeat right;
             padding-block: 4rem;
-            background-size: contain;
-        }
+            background-size: cover;
     }
     .nav-links {
       display: none;
