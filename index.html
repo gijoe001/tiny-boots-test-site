@@ -15,35 +15,17 @@
       <a href="#about">About</a>
       <a href="#programs">Programs</a>
       <a href="#pricing">Pricing</a>
+      <a href="#booking">1:2:1 Coaching</a>
       <a href="#contact">Contact us</a>
     </nav>
     <nav class="mobile-nav" role="navigation">
         <div id="menuToggle">
-          <!--
-          A fake / hidden checkbox is used as click reciever,
-          so you can use the :checked selector on it.
-          -->
           <input type="checkbox" id="menuCheckbox" />
-          
-          <!--
-          Some spans to act as a hamburger.
-          
-          They are acting like a real hamburger,
-          not that McDonalds stuff.
-          -->
           <span></span>
           <span></span>
           <span></span>
           
-          <!--
-          Too bad the menu has to be inside of the button
-          but hey, it's pure CSS magic.
-          -->
           <ul id="menu">
-            <!-- 
-            We can use a label here to close upon click (when doing same page navigation), this
-            does require a slight bit of JS.
-            -->
             <li>
               <a href="#">
                 <label for="menuCheckbox" onclick="this.parentNode.click();">Home</label>
@@ -54,8 +36,6 @@
                 <label for="menuCheckbox" onclick="this.parentNode.click();">About</label>
               </a>
             </li>
-            
-            <!-- These just close the menu -->
             <li>
                 <a href="#programs">
                 <label for="menuCheckbox" onclick="this.parentNode.click();">Programs</label>
@@ -64,6 +44,11 @@
             <li>
                 <a href="#pricing">
                 <label for="menuCheckbox" onclick="this.parentNode.click();">Pricing</label>
+                </a>
+            </li>
+            <li>
+                <a href="#booking">
+                <label for="menuCheckbox" onclick="this.parentNode.click();">1:2:1 Coaching</label>
                 </a>
             </li>
             <li>
@@ -138,7 +123,7 @@
         <div class="card-duration"><img src="images/time-icon.png" alt=""><p>30 minutes</p></div>
       </div>
       <div class="card">
-        <h3>Little Kickers</h3>
+        <h3>Little Ballers</h3>
         <p>Ages 2–3 years</p>
         <img src="images/programs-placeholder-image.png" alt="">
         <ul>
@@ -267,6 +252,8 @@
       <p>Check my availability below and request your preferred session.</p>
 
 <!-- Google Calendar Appointment Scheduling begin -->
+
+
 <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
 <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
 <script>
@@ -283,16 +270,15 @@
   });
 })();
 </script>
+</div>
+  
 <!-- end Google Calendar Appointment Scheduling -->
-    </div>
-  
   </section>
-  
  <!-- Testimonials -->
  <section id="reviews" class="reviews">
     <h2>Join our growing football family</h2>
     <p>See why parents trust us to coach, inspire, and support their children week after week.</p>
-  
+
     <div class="review-grid" id="reviewGrid">
       <div class="review-card">
         <div class="stars">★★★★★</div>
@@ -333,6 +319,12 @@
         <div class="contact-item">
           <span class="icon">✉️</span>
           <p><a href="mailto:njwsportz@gmail.com">njwsportz@gmail.com</a></p>
+        </div>
+        <div class="contact-item">
+            <span class="icon"><a href="https://www.facebook.com/events/st-nicholas-church-rg67jn/tiny-boots-toddler-football/1253467769571195"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.016 4.432,10.984 10.206,11.852v-8.672h-2.969v-3.154h2.969v-2.099c0,-3.475 1.693,-5 4.581,-5c1.383,0 2.115,0.103 2.461,0.149v2.753h-1.97c-1.226,0 -1.654,1.163 -1.654,2.473v1.724h3.593l-0.487,3.154h-3.106v8.697c5.857,-0.794 10.376,-5.802 10.376,-11.877c0,-6.627 -5.373,-12 -12,-12z"></path></g></g>
+                </svg></a></span>
+                <p><a href="https://www.facebook.com/events/st-nicholas-church-rg67jn/tiny-boots-toddler-football/1253467769571195">Visit our Facebook Page</a></p>
         </div>
       </div>
   

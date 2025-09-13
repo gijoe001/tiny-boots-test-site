@@ -154,3 +154,9 @@ function showThankYou() {
     document.getElementById("bookingForm").reset();
   }
   
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".ayOY8d").forEach(el => {
+      el.style.display = "none";
+    });
+  });

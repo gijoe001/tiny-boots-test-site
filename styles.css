@@ -111,7 +111,7 @@ p {
 #menuToggle a
 {
   text-decoration: none;
-  color: #232323;
+  color: #fff;
   
   transition: color 0.3s ease;
 }
@@ -149,8 +149,7 @@ p {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  
-  background: #cdcdcd;
+  background: #fff;
   border-radius: 3px;
   
   z-index: 1;
@@ -180,7 +179,7 @@ p {
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: #fff;
 }
 
 /*
@@ -215,7 +214,7 @@ p {
   padding-top: 125px;
   box-sizing: border-box;
   overflow-y: auto;
-  background: #ededed;
+  background: #121212;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -830,7 +829,9 @@ text-align: left;
   .contact-item a:hover {
     text-decoration: underline;
   }
-  
+
+
+
   /* Map + Location */
   .contact-map iframe {
     width: 100%;
@@ -857,4 +858,6 @@ text-align: left;
     color: #ffffff;
     opacity: 0.2;
 }  
-  
+.ayOY8d {
+    display: none !important;
+}
