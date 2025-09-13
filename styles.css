@@ -1,6 +1,6 @@
 /* Reset */
 :root {
-    --primary-orange:#FF6F00;
+    --primary-orange:#ffa600;
 }
 * {
     margin: 0;
@@ -11,6 +11,10 @@
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background: #0b0f1a;
+    color: #fff;
+  }
+
+  p {
     color: #fff;
   }
   
@@ -254,12 +258,14 @@ p {
     display: flex;
     margin-inline: 20px;
     flex-direction: column;
+    color: #fff;
     align-items: flex-start;
     max-width: 70ch;
   }
   .hero-text h1 {
     font-size: 2rem;
     line-height: 110%;
+    color: #fff;
     margin-bottom: 1rem;
   }
   .hero-buttons {
@@ -418,17 +424,23 @@ text-align: left;
   }
   .pricing-cards .card {
     padding: 1.8rem;
+    height: 450px;
+    position: relative;
+  }
+  .pricing-cards .card-container {
+    padding-block: 1.8rem;
   }
   .best-value {
     border: 2px solid var(--primary-orange);
   }
   .best-value-pill {
     background-color: var(--primary-orange);
+    color: #000;
     padding-inline: 20px;
     padding-block: 2px;
-    top: -11%;
+    top: -4%;
     z-index: 1;
-    position: relative;
+    position: absolute;
     border-radius: 10px;
   }
 /* Mobile Slider */
@@ -703,15 +715,15 @@ text-align: left;
     max-width: 500px;
     border: none;
     border-radius: 10px;
-    background: var(--primary-orange);
-    color: #000 !important;
+    background: var(--primary-orange) !important;
+    color: #000 !important; 
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
     transition: background 0.3s;
 }
 .booking-header button:hover {
-    background: #ff9900  !important;
+    background: #ff9900 ;
   }
 
   /* Mobile */

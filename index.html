@@ -169,6 +169,7 @@
     </div>
 
     <div class="pricing-cards" id="pricing-cards">
+        <div class="card-container">
         <div class="card best-value">
             <span class="best-value-pill">Best Value</span>
             <h3>Termly Pass</h3>
@@ -182,6 +183,8 @@
               <li>Small groups, big smiles!</li>
             </ul>
           </div>
+        </div>
+        <div class="card-container">
           <div class="card">
             <h3>Monthly Baller</h3>
             <h4>4 sessions per month</h4>
@@ -194,6 +197,8 @@
               <li>Small groups, big smiles!</li>
             </ul>
           </div>
+        </div>
+        <div class="card-container">
       <div class="card">
         <h3>Drop-in session</h3>
         <h4>Perfect for trying us out</h4>
@@ -205,7 +210,7 @@
           <li>Small groups, big smiles!</li>
         </ul>
       </div>
-
+    </div>
     </div>
       <!-- dots -->
   <div class="review-dots" id="pricingDots"></div>
@@ -271,6 +276,7 @@
     calendar.schedulingButton.load({
       url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3lawNpVu9RxbbiDuodU3oBOInmSUG6-gTm-xb_Zbvj_KL2JR_do0BxSpUpXPHE8V5yn6v6GR7C?gv=true',
       color: '#FF6F00',
+      padding: '20px',
       label: 'Book an appointment',
       target,
     });
