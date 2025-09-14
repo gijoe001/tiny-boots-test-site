@@ -8,6 +8,18 @@ menuToggle.addEventListener("click", () => {
   navLinks.style.display =
     navLinks.style.display === "flex" ? "none" : "flex";
 });
+// change colour of nav when scrolled
+window.addEventListener("scroll", function() {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) { 
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+
+
 // ========================
 // Sliders
 // ========================
@@ -154,9 +166,3 @@ function showThankYou() {
     document.getElementById("bookingForm").reset();
   }
   
-
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".ayOY8d").forEach(el => {
-      el.style.display = "none";
-    });
-  });
