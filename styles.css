@@ -319,7 +319,7 @@ p {
   }
   .scroll-dot {
     position: absolute;
-    bottom: 3rem; /* adjust to move it up/down */
+    bottom: 2rem; /* adjust to move it up/down */
     left: 50%;
     transform: translateX(-50%);
     border: 2px solid white;
