@@ -835,6 +835,9 @@ text-align: left;
     .hero {
         background: url('images/header-image-mobile.jpg') no-repeat top right/cover;
       }
+    .hero-text {
+      margin-top: -20%;
+    }
   }
   /* Contact Section */
 .contact {
