@@ -921,8 +921,8 @@ text-align: left;
     padding-block:60px ;
   }
 .footer .designed-by {
-    color: #ffffff;
-    opacity: 0.2;
+    color: #ffffff !important;
+    opacity: 0.2 !important;
 }  
 .ayOY8d {
     display: none !important;
