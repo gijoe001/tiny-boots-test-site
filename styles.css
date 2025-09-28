@@ -371,7 +371,7 @@ p {
   }
   .about-grid-image img {
     width: 100%;
-    max-width: 450px;
+    max-width: 350px;
   }
   .about-grid {
 display: flex;
@@ -380,7 +380,6 @@ margin-inline: 20px;
 flex-direction: column;
 text-align: left;
     gap: 2rem;
-    margin-top: 2rem;
   }
   
   /* Programs */
@@ -802,6 +801,7 @@ text-align: left;
     justify-content: center;
     margin-top: 45px;
     flex-direction: row;
+    margin-bottom: 60px;
 }
   /* Mobile */
   @media (max-width: 768px) {
